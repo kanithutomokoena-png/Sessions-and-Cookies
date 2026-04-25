@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'root', '@Mokoena84886', 'sessions') or die('Unable to connect');
+$conn = mysqli_connect('localhost', 'root', '', 'sessions') or die('Unable to connect');
 
 if (!isset($_SESSION["Username"]) && isset($_COOKIE["remember_username"]) && isset($_COOKIE["remember_password"])) {
     $cookieUser = mysqli_real_escape_string($conn, $_COOKIE["remember_username"]);
